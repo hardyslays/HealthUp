@@ -1,0 +1,83 @@
+body {
+  background-color: #E8ECEF;
+  text-align: center;
+}
+ 
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+ 
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+ 
+.container.mt-5{
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  width: 60%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  padding: 10px 5px;
+}
+ 
+.lead{
+  font-size: 2.25rem;
+}
+
+
+.btn {
+  border-radius: 2px;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 10px 19px;
+  cursor: pointer;
+}
+
+/* Nav bar */
+.nav-heading{
+    width: 60vw;
+    border: solid black 1px;
+}
+@media screen and (max-width: 950px){
+    #nav-title{
+        display: none !important;
+    }
+}
+
+/*Stats*/
+#bp_stats_container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#sugar_stats_container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Footer*/
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#footer p {
+  margin: auto;
+}
+
+.inp_1{
+  width : 500px;
+  margin: auto;
+  margin-top:100px;
+  margin-bottom: 10px;
+}

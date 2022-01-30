@@ -1,0 +1,44 @@
+<%- include("./partials/header"); %>
+<div class="form-box">
+    <h1 class="mt-5 mb-4 font-weight-bold">LOGIN</h1>
+
+    
+        
+    <form action="/login" method="POST">
+
+
+        <div class="form-floating mb-2">
+            <input type="text" name="username" id="username" placeholder="enter username..." class="form-control rounded">
+            <label for="username">USERNAME</label>
+        </div>
+
+        <div class="form-floating  mb-2">
+            <input type="password" name="password" placeholder="Enter passowrd..." id="password" class="form-control">
+            <label for="password">PASSWORD</label>
+        </div>
+
+        <input type="submit" value="LOGIN" class="btn btn-outline-primary">
+
+
+    </form>
+
+
+
+
+    <h4 class="mt-4 mb-2 font-weight-bold">NEW USER REGISTER FIRST</h4>
+
+
+
+    <form action="/register" method="get">
+
+
+        <input type="submit" value="REGISTER" class="btn btn-outline-primary mb-2">
+
+
+    </form>
+
+    <% if(message.err !== undefined) { %>
+        <h4 class="mt-1 mb-1" style="color: red;"> Incorect Username or Password</h4>
+    <% } %>
+</div>
+<%- include("./partials/footer"); %>

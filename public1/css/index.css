@@ -1,0 +1,609 @@
+/* DEVELOPER */
+.test{
+    border: solid red 1px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    text-align: center;
+
+    background-color: #0275d8;
+    color: white;
+}
+
+/* BUTTON STYLES */
+
+.green{
+    padding: 10px;
+    background: rgb(26, 226, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: 570;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(3, 94, 179);
+    border: none;
+}
+.green:hover{
+    background: rgb(23, 201, 0);
+}
+.red{
+    padding: 10px;
+    background: rgb(226, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: 570;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(3, 94, 179);
+    border: none;
+}
+.red:hover{
+    background: rgb(201, 0, 0);
+}
+
+
+.decideBtn{
+    font-size: 13px;
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* NAV BAR */
+.nav-heading{
+    width: 60vw;
+    border: solid black 1px;
+}
+@media screen and (max-width: 950px){
+    #nav-title{
+        display: none !important;
+    }
+}
+
+
+/* Login and register page */
+.form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+
+    background-color: rgb(233, 233, 233);
+    box-shadow: 0 0 8px 7px #043461;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+/* HOME PAGE */
+
+/*SIDEBAR*/
+#sidebar{
+    width: 300px;
+    font-size: 20px;
+    background-color: white;    
+}
+#sidebar>ul>li{
+    border: none;
+    border-radius: 3px;
+}
+.list-item{
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+#main{
+    min-height: 89.2vh;
+}
+
+.home-active-btn{
+    box-shadow: 0 0 0 3px #0275d8, 0 0 0 5px #212529;
+}
+
+/*Inventory list*/
+#inv-items{
+    margin: 25px;
+}
+#inv-items>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+#inv-list{
+    font-size: 20px;
+}
+#inv-list>.inv-head{
+    font-weight: bolder;
+    background: #212529;
+}
+
+#inv-list>div>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#inv-list>div>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#inv-list>div>.row:nth-child(2n){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#inv-list>div>.row:nth-child(2n):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+
+/* ITEMS LIST */
+#items-list{
+    margin: 25px;
+}
+#items-list>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+#items-table{
+    font-size: 20px;;
+}
+#items-table>.head{
+    font-weight: bolder;
+    background: #212529;
+}
+#items-list-body>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#items-list-body>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#items-list-body>.row:nth-child(2n){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#items-list-body>.row:nth-child(2n):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+
+/*ADD INVENTORY ITEMS*/
+#add-inv{
+    margin: 25px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+#add-inv>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+#add-inv>div>div>div>label{
+    margin-left: 10px;
+}
+
+.empty_inp{
+    border: solid 1px red;
+    box-shadow: inset 0 0 3px 1px red;
+}
+.empty_inp:focus{
+    border: solid 1px red;
+    box-shadow: inset 0 0 3px 1px red;
+}
+#add-inv>h3{
+    text-transform: uppercase;
+    color: rgb(10, 10, 10);
+    font-size: 35px;
+    margin: 15px;
+    border-bottom: solid 3px black;
+    border-top: solid 3px black;
+}
+
+#add-item-response{
+    text-align: left;
+}
+
+/*Remove items from inventory*/
+
+#rem-inv{
+    margin: 25px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+#rem-inv>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+#rem-inv>div>div>div>label{
+    margin-left: 10px;
+}
+
+
+#rem-inv>h3{
+    text-transform: uppercase;
+    color: rgb(10, 10, 10);
+    font-size: 35px;
+    margin: 15px;
+    border-bottom: solid 3px black;
+    border-top: solid 3px black;
+}
+#rem-item-response{
+    text-align: left;
+}
+.send_request{
+    width : 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+/* Set minimum quantity*/
+#set-min-quan>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+#set-min-quan>h3{
+    text-transform: uppercase;
+    color: rgb(10, 10, 10);
+    font-size: 20px;
+    margin: 15px;
+    text-align: left;
+}
+
+#set-min-quan{
+    margin: 25px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+#set-min-quan>div>div>div>label{
+    margin-left: 10px;
+}
+
+
+/* ITEM TRANSFER */
+#send-request{
+    margin: 25px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+#send-request>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+#send-request>div>div>div>label{
+    margin-left: 10px;
+}
+
+
+#pending-request{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+#pending-request>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+#received-request{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+#received-request>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+#success{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+#success>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+
+/* TRANSFER AUTOMATION PAGE */
+
+/* CONNECTION LIST */
+#connections{
+    margin: 25px;
+}
+#connections>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+.connections-table{
+    font-size: 20px;
+}
+.connections-table>.head{
+    font-weight: bolder;
+    background: #212529;
+}
+
+.connections-table>.row:nth-child(2n+2){
+    background: #EEE;
+    color: #222;
+}
+.connections-table>.row:nth-child(2n+2):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+.connections-table>.row:nth-child(2n+3){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+.connections-table>.row:nth-child(2n+3):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+
+#send_table_body>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#send_table_body>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#send_table_body>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#send_table_body>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+#rec_table_body>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#rec_table_body>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#rec_table_body>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#rec_table_body>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+/* SEND CONNECTION */
+#send-connection{
+    margin: 25px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 25px;
+}
+#send-connection>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+#send-connection>div>div>div>label{
+    margin-left: 10px;
+}
+
+/* PENDING REQUESTS */
+#pending-connection{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+    margin: 25px;
+}
+#pending-connection>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+#pending_req_table>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#pending_req_table>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#pending_req_table>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#pending_req_table>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+/* REQUEST HISTORY */
+#request-history{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+    margin: 25px;
+}
+#request-history>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+.req-history-table{
+    font-size: 20px;
+}
+.req-history-table>.head{
+    font-weight: bolder;
+    background: #212529;
+}
+#req_history_table>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#req_history_table>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#req_history_table>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#req_history_table>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+
+/* TRANSFER LOG FOR AUTOMATION */
+#automation-transfer-log{
+    margin: 25px;   
+    font-size: 20px;
+    text-align: center;
+    margin: 25px;
+}
+#automation-transfer-log>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+#sender_auto_transfer>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#sender_auto_transfer>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#sender_auto_transfer>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#sender_auto_transfer>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+#receiver_auto_transfer>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#receiver_auto_transfer>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#receiver_auto_transfer>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#receiver_auto_transfer>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+/* ISSUES IN AUTOMATION */
+#issues{
+    margin: 25px;   
+    font-size: 20px;
+    text-align: center;
+    margin: 25px;
+}
+#issues>h2{
+    background: #212529;
+    color: #EEE;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+#sender_auto_issue>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#sender_auto_issue>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#sender_auto_issue>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#sender_auto_issue>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+#receiver_auto_issue>.row:nth-child(2n+1){
+    background: #EEE;
+    color: #222;
+}
+#receiver_auto_issue>.row:nth-child(2n+1):hover{
+    background: rgb(201, 201, 201);
+    color: rgb(10, 10, 10);
+}
+
+#receiver_auto_issue>.row:nth-child(2n+2){
+    background: rgb(165, 165, 165);
+    color: #222;
+}
+#receiver_auto_issue>.row:nth-child(2n+2):hover{
+    background: rgb(134, 134, 134);
+    color: rgb(10, 10, 10);
+}
+
+
+#inp_1{
+    width : 500px;
+    margin: auto;
+    margin-top:100px;
+    margin-bottom: 10px;
+}

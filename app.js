@@ -11,7 +11,6 @@ const cokkieSession = require('cookie-session')
 //Import and config env file
 require('dotenv').config()
 
-//Set up Port number
 const PORT = process.env.PORT || 5000
 
 //db
@@ -119,6 +118,7 @@ app.route('/')
         res.render('home', { 'loggedIn': req.isAuthenticated() })
     })
 
+    
 //Login
 app.route('/login')
     .get(isLoggedOut, (req, res) => {
@@ -128,6 +128,7 @@ app.route('/login')
         successRedirect: '/',
         failureRedirect: '/login?err=true'
     }))
+
 
 //Register
 app.route('/register')
@@ -146,7 +147,7 @@ app.route('/register')
                 res.redirect('/register?err=server')
             }
             else {
-                db.query(`INSERT INTO users VALUES ('${username}', '${hash}', '${name}');`, (err) => {
+                db.query('INSERT INTO users SET ?',{username : username,  hash_pass : hash, name : name},(err) => {
                     if (err) {
                         console.log("DB err: ", err)
                         res.redirect('/register?err=server')
@@ -155,14 +156,14 @@ app.route('/register')
                         console.log("SUCCESS")
                         let bp_table = username + "_bp";
                         let sugar_table = username + "_sugar";
-                        db.query(`CREATE TABLE ${bp_table}(time_stamp DATETIME DEFAULT CURRENT_TIMESTAMP PRIMARY KEY,bp_high INT,bp_low INT, medicine VARCHAR(256))`, (err) => {
+                        db.query(`CREATE TABLE ${bp_table}(time_stamp varchar(256) PRIMARY KEY,bp_high INT,bp_low INT, medicine VARCHAR(256))`, (err) => {
                             if (err) {
                                 console.log("DB err: ", err)
                                 res.redirect('/register?err=server')
                             }
                             else{
                                 console.log("Created table for bp");
-                                db.query(`CREATE TABLE ${sugar_table}(time_stamp DATETIME DEFAULT CURRENT_TIMESTAMP PRIMARY KEY,sugar INT, medicine VARCHAR(256))`, (err) => {
+                                db.query(`CREATE TABLE ${sugar_table}(time_stamp varchar(256) PRIMARY KEY,sugar INT, medicine VARCHAR(256))`, (err) => {
                                     if (err) {
                                         console.log("DB err: ", err)
                                         res.redirect('/register?err=server')
@@ -229,7 +230,7 @@ app.get("/sugar_stats", isLoggedIn, (req, res) => {
             }
         })
     }
-})
+});
 
 //Add data
 app.post('/bp_update', (req,res) => {
@@ -279,6 +280,7 @@ app.post('/sugar_update', (req,res) => {
         let sugar = req.body.sugar_level;
         let sugar_table = user + "_sugar";
         let timestamp = new Date();
+        // let today = new Date();
 
         db.query(`SELECT sugar_med FROM users WHERE username="${user}"`, (err, rows) => {
             if(err){
@@ -395,5 +397,5 @@ app.route("/sugar_med")
 
 //Open server to listen
 app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
+    console.log(`Server started...`);
 });

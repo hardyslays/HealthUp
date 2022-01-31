@@ -28,5 +28,7 @@ The steps for installation of the app and running in localhost are:
 
 This project was created by us as a team. My team members are: [Yash Nishal](https://github.com/YashNishal), [Yanshul Narotra](https://github.com/Yanshul-Narotra), [Yashwant Meena](https://github.com/pAge444). Kudos to the team.
 
+We have also hosted the web application online. You can check out the project by [clicking here.](https://health-up-server.herokuapp.com/)
+
 Hit the star if you liked the project.
 With :heart: from the team Edbun.
